@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)sayHelloWithName:(NSString *)name age:(NSNumber *)age gender:(NSString *)gender;
 
+-(void)test;
 
 @end
 

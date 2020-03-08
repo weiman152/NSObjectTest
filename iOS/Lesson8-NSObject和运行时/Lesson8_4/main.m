@@ -12,15 +12,21 @@
 
 void test1(void);
 void test2(void);
+void test3(void);
+void test4(void);
 
 int main(int argc, const char * argv[]) {
+    
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
         
-        
+        //test2();
+        // test3();
+        test4();
         
     }
+    
     return 0;
 }
 
@@ -50,8 +56,34 @@ void test1() {
     SEL selector = NSSelectorFromString(@"sayHelloWithName:age:gender:");
     NSArray * array = @[name, age, gender];
     [a performSelector:selector withObjects:array];
+    
 }
 
 void test2() {
+    
+    ClassA * a = [[ClassA alloc]init];
+    if ([a respondsToSelector:@selector(sayHello)]) {
+         [a performSelector:@selector(sayHello) withObject:nil afterDelay:0];
+        } else {
+            NSLog(@"不执行呢");
+    }
+}
+
+void test3() {
+    ClassA * a = [[ClassA alloc] init];
+    if ([a respondsToSelector:@selector(sayHello)]) {
+        [a performSelector:@selector(sayHello) withObject:nil afterDelay:0 inModes:@[@"NSDefaultRunLoopMode",@"NSRunLoopCommonModes"]];
+    }else{
+        NSLog(@"不执行哟");
+    }
+    
+}
+
+void test4() {
+    
+    //1.- (void)performSelectorOnMainThread:(SEL)aSelector withObject:(nullable id)arg waitUntilDone:(BOOL)wait;
+    
+    ClassA * a = [[ClassA alloc] init];
+    [a performSelectorOnMainThread:@selector(sayHelloWithName:) withObject:@"小绵羊" waitUntilDone:YES];
     
 }

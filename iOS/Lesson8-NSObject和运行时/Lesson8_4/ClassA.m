@@ -15,7 +15,13 @@
 }
 
 -(void)sayHello {
+    
     NSLog(@"你好，我是ClassA");
+}
+
+-(void)test {
+    NSLog(@"test");
+    [self performSelector:@selector(sayHello) withObject:nil afterDelay:0];
 }
 
 -(void)sayHelloWithName:(NSString *)name {
@@ -34,4 +40,5 @@
 -(void)sayHelloWithName:(NSString *)name age:(NSNumber *)age gender:(NSString *)gender{
     NSLog(@"name: %@, age = %d, gender = %@", name, age.integerValue, gender);
 }
+
 @end
