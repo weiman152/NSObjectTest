@@ -18,6 +18,7 @@
 		3B28D40E2413A7B500645568 /* TableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28D4092413A7B500645568 /* TableViewModel.m */; };
 		3B28D40F2413A7B500645568 /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28D40A2413A7B500645568 /* DataModel.m */; };
 		3B28D4122413A7FB00645568 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B28D4112413A7FB00645568 /* TableCell.m */; };
+		3B7DECAF24174D2E0042FFFE /* ScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7DECAE24174D2E0042FFFE /* ScrollController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		3B28D40C2413A7B500645568 /* TableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableController.h; sourceTree = "<group>"; };
 		3B28D4102413A7FB00645568 /* TableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableCell.h; sourceTree = "<group>"; };
 		3B28D4112413A7FB00645568 /* TableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableCell.m; sourceTree = "<group>"; };
+		3B7DECAD24174D2E0042FFFE /* ScrollController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollController.h; sourceTree = "<group>"; };
+		3B7DECAE24174D2E0042FFFE /* ScrollController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,7 @@
 		3B28D3E3241357D500645568 /* TestPerform */ = {
 			isa = PBXGroup;
 			children = (
+				3B7DECAC24174D110042FFFE /* Scroll */,
 				3B28D4062413A7B500645568 /* Table */,
 				3B28D3E4241357D500645568 /* AppDelegate.h */,
 				3B28D3E5241357D500645568 /* AppDelegate.m */,
@@ -102,6 +106,15 @@
 				3B28D4112413A7FB00645568 /* TableCell.m */,
 			);
 			path = Table;
+			sourceTree = "<group>";
+		};
+		3B7DECAC24174D110042FFFE /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				3B7DECAD24174D2E0042FFFE /* ScrollController.h */,
+				3B7DECAE24174D2E0042FFFE /* ScrollController.m */,
+			);
+			path = Scroll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 				3B28D3EC241357D500645568 /* ViewController.m in Sources */,
 				3B28D3E6241357D500645568 /* AppDelegate.m in Sources */,
 				3B28D3F7241357DB00645568 /* main.m in Sources */,
+				3B7DECAF24174D2E0042FFFE /* ScrollController.m in Sources */,
 				3B28D40E2413A7B500645568 /* TableViewModel.m in Sources */,
 				3B28D40F2413A7B500645568 /* DataModel.m in Sources */,
 				3B28D40D2413A7B500645568 /* TableController.m in Sources */,

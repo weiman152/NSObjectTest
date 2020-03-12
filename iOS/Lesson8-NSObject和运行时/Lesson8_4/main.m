@@ -83,7 +83,17 @@ void test4() {
     
     //1.- (void)performSelectorOnMainThread:(SEL)aSelector withObject:(nullable id)arg waitUntilDone:(BOOL)wait;
     
+    NSLog(@"1111 %@", [NSRunLoop currentRunLoop].currentMode);
+    
     ClassA * a = [[ClassA alloc] init];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"------dispatch_async--------");
+        [a sayHelloWithName:@"小毛驴"];
+        printf("\n\n");
+        
+    });
+    
+    NSLog(@"------performSelectorOnMainThread--------");
     [a performSelectorOnMainThread:@selector(sayHelloWithName:) withObject:@"小绵羊" waitUntilDone:YES];
     
 }
