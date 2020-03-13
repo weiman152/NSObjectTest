@@ -30,6 +30,17 @@
 
 - (IBAction)test:(id)sender {
     
+    [self performSelectorInBackground:@selector(sayHiWithName:) withObject:@"小柳叶"];
+    
+    [NSThread detachNewThreadSelector:@selector(sayHiWithName:) toTarget:self withObject:@"小青青"];
+    
+    NSThread * myThread = [[NSThread alloc] initWithTarget:self selector:@selector(sayHiWithName:) object:@"小红红"];
+    [myThread start];
+    
+}
+
+-(void)sayHiWithName: (NSString *)name {
+    NSLog(@"你好呀，我的名字是： %@",name);
 }
 
 @end

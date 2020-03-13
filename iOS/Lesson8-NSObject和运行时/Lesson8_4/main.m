@@ -14,8 +14,14 @@ void test1(void);
 void test2(void);
 void test3(void);
 void test4(void);
+void test5(void);
+void testAA(void);
+
+static ClassA * sa;
 
 int main(int argc, const char * argv[]) {
+    
+    sa = [[ClassA alloc] init];
     
     @autoreleasepool {
         // insert code here...
@@ -23,7 +29,8 @@ int main(int argc, const char * argv[]) {
         
         //test2();
         // test3();
-        test4();
+        //test4();
+        test5();
         
     }
     
@@ -96,4 +103,40 @@ void test4() {
     NSLog(@"------performSelectorOnMainThread--------");
     [a performSelectorOnMainThread:@selector(sayHelloWithName:) withObject:@"小绵羊" waitUntilDone:YES];
     
+    NSLog(@"------performSelectorOnMainThread,modes--------");
+    [a performSelectorOnMainThread:@selector(sayHelloWithName:) withObject:@"小露珠" waitUntilDone:YES modes:@[NSRunLoopCommonModes]];
+    
+}
+
+void test5() {
+    
+    ClassA * a = [[ClassA alloc] init];
+    if ([a respondsToSelector:@selector(sayHelloWithName:)]) {
+        NSLog(@"a 响应了sayHelloWithName方法");
+        [a performSelectorInBackground:@selector(sayHelloWithName:) withObject:@"小花狗"];
+    } else {
+        NSLog(@"不执行哟");
+    }
+    
+    //使用NSThread试试
+    //方法一
+    [NSThread detachNewThreadSelector:@selector(sayHelloWithName:) toTarget:a withObject:@"小红花"];
+    
+    //方法二
+    NSThread * myThread = [[NSThread alloc] initWithTarget:a selector:@selector(sayHelloWithName:) object:@"小叶子"];
+    [myThread start];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"GCD这是一个子线程");
+        NSLog(@"thread: %@", [NSThread currentThread]);
+        [a sayHelloWithName:@"小青蛙"];
+        
+        testAA();
+        
+        [sa sayHello];
+    });
+}
+
+void testAA() {
+    NSLog(@"哇哈哈哈哈");
 }
