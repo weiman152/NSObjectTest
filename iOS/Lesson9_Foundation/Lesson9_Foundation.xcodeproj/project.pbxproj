@@ -7,11 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1747392445613800788BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1747382445613800788BEB /* main.m */; };
+		3B17473F244564A300788BEB /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B17473E244564A300788BEB /* ClassA.m */; };
 		3BFB1C802436DB74005BBAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB1C7F2436DB74005BBAF1 /* main.m */; };
 		3BFB1C8D2436DBB1005BBAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB1C8C2436DBB1005BBAF1 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3B1747342445613800788BEB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		3BFB1C7A2436DB74005BBAF1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B1747362445613800788BEB /* CopyTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CopyTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B1747382445613800788BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B17473D244564A300788BEB /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
+		3B17473E244564A300788BEB /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
 		3BFB1C7C2436DB74005BBAF1 /* Lesson9_Foundation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson9_Foundation; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB1C7F2436DB74005BBAF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BFB1C8A2436DBB1005BBAF1 /* NSString */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSString; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3B1747332445613800788BEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BFB1C792436DB74005BBAF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,10 +79,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B1747372445613800788BEB /* CopyTest */ = {
+			isa = PBXGroup;
+			children = (
+				3B1747382445613800788BEB /* main.m */,
+				3B17473D244564A300788BEB /* ClassA.h */,
+				3B17473E244564A300788BEB /* ClassA.m */,
+			);
+			path = CopyTest;
+			sourceTree = "<group>";
+		};
 		3BFB1C732436DB74005BBAF1 = {
 			isa = PBXGroup;
 			children = (
 				3BFB1C7E2436DB74005BBAF1 /* Lesson9_Foundation */,
+				3B1747372445613800788BEB /* CopyTest */,
 				3BFB1C8B2436DBB1005BBAF1 /* NSString */,
 				3BFB1C7D2436DB74005BBAF1 /* Products */,
 			);
@@ -71,6 +104,7 @@
 			children = (
 				3BFB1C7C2436DB74005BBAF1 /* Lesson9_Foundation */,
 				3BFB1C8A2436DBB1005BBAF1 /* NSString */,
+				3B1747362445613800788BEB /* CopyTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +128,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3B1747352445613800788BEB /* CopyTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B17473C2445613800788BEB /* Build configuration list for PBXNativeTarget "CopyTest" */;
+			buildPhases = (
+				3B1747322445613800788BEB /* Sources */,
+				3B1747332445613800788BEB /* Frameworks */,
+				3B1747342445613800788BEB /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CopyTest;
+			productName = CopyTest;
+			productReference = 3B1747362445613800788BEB /* CopyTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		3BFB1C7B2436DB74005BBAF1 /* Lesson9_Foundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BFB1C832436DB74005BBAF1 /* Build configuration list for PBXNativeTarget "Lesson9_Foundation" */;
@@ -137,6 +188,9 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = weiman;
 				TargetAttributes = {
+					3B1747352445613800788BEB = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					3BFB1C7B2436DB74005BBAF1 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -160,11 +214,21 @@
 			targets = (
 				3BFB1C7B2436DB74005BBAF1 /* Lesson9_Foundation */,
 				3BFB1C892436DBB1005BBAF1 /* NSString */,
+				3B1747352445613800788BEB /* CopyTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3B1747322445613800788BEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B17473F244564A300788BEB /* ClassA.m in Sources */,
+				3B1747392445613800788BEB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3BFB1C782436DB74005BBAF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,6 +248,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		3B17473A2445613800788BEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B17473B2445613800788BEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3BFB1C812436DB74005BBAF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,6 +408,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3B17473C2445613800788BEB /* Build configuration list for PBXNativeTarget "CopyTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B17473A2445613800788BEB /* Debug */,
+				3B17473B2445613800788BEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3BFB1C772436DB74005BBAF1 /* Build configuration list for PBXProject "Lesson9_Foundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
