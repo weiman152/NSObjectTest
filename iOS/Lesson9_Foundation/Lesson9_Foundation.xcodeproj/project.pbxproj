@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B1747392445613800788BEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1747382445613800788BEB /* main.m */; };
 		3B17473F244564A300788BEB /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B17473E244564A300788BEB /* ClassA.m */; };
+		3BCC6CF22448462D0090DBC8 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BCC6CF12448462D0090DBC8 /* ClassB.m */; };
 		3BFB1C802436DB74005BBAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB1C7F2436DB74005BBAF1 /* main.m */; };
 		3BFB1C8D2436DBB1005BBAF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB1C8C2436DBB1005BBAF1 /* main.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		3B1747382445613800788BEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B17473D244564A300788BEB /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
 		3B17473E244564A300788BEB /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
+		3BCC6CF02448462D0090DBC8 /* ClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
+		3BCC6CF12448462D0090DBC8 /* ClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassB.m; sourceTree = "<group>"; };
 		3BFB1C7C2436DB74005BBAF1 /* Lesson9_Foundation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lesson9_Foundation; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BFB1C7F2436DB74005BBAF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3BFB1C8A2436DBB1005BBAF1 /* NSString */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSString; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +88,8 @@
 				3B1747382445613800788BEB /* main.m */,
 				3B17473D244564A300788BEB /* ClassA.h */,
 				3B17473E244564A300788BEB /* ClassA.m */,
+				3BCC6CF02448462D0090DBC8 /* ClassB.h */,
+				3BCC6CF12448462D0090DBC8 /* ClassB.m */,
 			);
 			path = CopyTest;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCC6CF22448462D0090DBC8 /* ClassB.m in Sources */,
 				3B17473F244564A300788BEB /* ClassA.m in Sources */,
 				3B1747392445613800788BEB /* main.m in Sources */,
 			);
